@@ -1,0 +1,82 @@
+name: Bug report
+description: Report a crash, broken scan, or other unexpected application behavior.
+title: "[Bug]: "
+labels: [bug, beta-feedback]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Lossless Audit version
+      placeholder: "For example: 0.1.57"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "For example: macOS 14.6"
+    validations:
+      required: true
+  - type: dropdown
+    id: mac-type
+    attributes:
+      label: Mac type
+      options:
+        - Apple silicon
+        - Intel
+        - I do not know
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest steps that show the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: reproducible
+    attributes:
+      label: Is the issue reproducible?
+      options:
+        - Every time
+        - Sometimes
+        - I could not reproduce it
+    validations:
+      required: true
+  - type: dropdown
+    id: crash
+    attributes:
+      label: Did Lossless Audit crash?
+      options:
+        - "No"
+        - "Yes"
+        - I am not sure
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Copied diagnostics can contain file names or filesystem paths. Review them before sharing."
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Copied diagnostics (optional)
+      render: text

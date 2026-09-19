@@ -1,0 +1,54 @@
+name: Suspicious result or possible false positive
+description: Share a result you think may need review.
+title: "[Result review]: "
+labels: [detector, beta-feedback]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Lossless Audit version
+      placeholder: "For example: 0.1.57"
+    validations:
+      required: true
+  - type: input
+    id: verdict
+    attributes:
+      label: Verdict shown
+      placeholder: "For example: Bandwidth-limited — review"
+    validations:
+      required: true
+  - type: input
+    id: format
+    attributes:
+      label: File format
+      placeholder: "For example: FLAC, ALAC, WAV"
+    validations:
+      required: true
+  - type: input
+    id: bitrate
+    attributes:
+      label: Nominal bitrate (if known)
+  - type: dropdown
+    id: provenance
+    attributes:
+      label: Do you know the file's provenance?
+      options:
+        - "Yes"
+        - "No"
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why do you believe the result may be incorrect?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "One report does not automatically mean the detector should change. Do not upload copyrighted audio unless you have the right to share it. Copied diagnostics may contain file names or filesystem paths; review them before sharing."
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Copied diagnostics (optional)
+      render: text

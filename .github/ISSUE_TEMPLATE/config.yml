@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Download Lossless Audit
+    url: https://github.com/mattcrogan/LosslessAudit-Releases/releases
+    about: Download official beta builds from the Releases page.

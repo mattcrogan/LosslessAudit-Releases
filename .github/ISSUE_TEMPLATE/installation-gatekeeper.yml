@@ -1,0 +1,67 @@
+name: Installation or Gatekeeper problem
+description: Report trouble downloading, installing, or opening the beta.
+title: "[Installation]: "
+labels: [installation, beta-feedback]
+body:
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "For example: macOS 14.6"
+    validations:
+      required: true
+  - type: dropdown
+    id: mac-type
+    attributes:
+      label: Mac type
+      options:
+        - Apple silicon
+        - Intel
+        - I do not know
+    validations:
+      required: true
+  - type: textarea
+    id: failed-step
+    attributes:
+      label: Installation step where it failed
+      description: Tell us the exact step, such as extracting the ZIP or first launch.
+    validations:
+      required: true
+  - type: textarea
+    id: macos-message
+    attributes:
+      label: Exact macOS warning or error wording
+    validations:
+      required: true
+  - type: dropdown
+    id: open-anyway
+    attributes:
+      label: Did you try System Settings → Privacy & Security → Open Anyway?
+      options:
+        - "Yes"
+        - "No"
+        - I could not find that option
+    validations:
+      required: true
+  - type: dropdown
+    id: applications
+    attributes:
+      label: Did you move Lossless Audit.app to Applications?
+      options:
+        - "Yes"
+        - "No"
+        - Not yet
+    validations:
+      required: true
+  - type: checkboxes
+    id: official-download
+    attributes:
+      label: Official download
+      options:
+        - label: I downloaded the ZIP from this repository's official Releases page.
+          required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (optional)
+      description: Drag a screenshot here if it does not contain information you want to keep private.

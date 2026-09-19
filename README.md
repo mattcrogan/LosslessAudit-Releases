@@ -13,3 +13,9 @@ Releases are currently distributed outside the Mac App Store using ad-hoc code s
 Download binaries only from this repository's Releases page and compare the published SHA-256 checksum if you want to verify file integrity.
 
 Please report beta problems through this repository's Issues section.
+
+## Beta feedback
+
+Report crashes, installation failures, broken scans, confusing behavior, and suspicious results through Issues. Include copied diagnostics when useful, but review them first because they can contain file names or filesystem paths. Do not upload copyrighted audio unless you are legally permitted to share it.
+
+Detector findings are advisory and are not proof. Feature requests are welcome, though they may not be implemented during this beta.
